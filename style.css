@@ -1,0 +1,386 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.section{
+    padding: 3rem 12%;
+}
+
+.portfolio{
+    width: 100%;
+    background: linear-gradient(to bottom, transparent, #0e0e0e 40%), url(./images/portfolio_bg.jpg) no-repeat center;
+    background-size: cover;
+    padding-top: 12rem;
+}
+
+.title__container{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+    gap: 1.2rem;
+}
+
+.title{
+    line-height: 2.5rem;
+}
+
+.title span{
+    color: orange;
+    text-transform: uppercase;
+    font-size: .8rem;
+    letter-spacing: .15rem;
+    font-weight: 600;
+}
+
+.title h1{
+    color: #fff;
+    font-size: 3rem;
+}
+
+.btn__title{
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: orange;
+    border: 1px solid orange;
+    cursor: pointer;
+    font-size: .8rem;
+    letter-spacing: -.02rem;
+    transition: ease-in .2s;
+}
+
+.btn__title:hover,
+.contact__form button:hover,
+.subscribe:hover{
+    background-color: #242424;
+    color: orange;
+}
+
+/* ========== WORK ========== */
+.works__container{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.work{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    background-color: #242424;
+}
+
+.work img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: top;
+    filter: grayscale(1);
+    order: 1;
+    transition: ease-in .6s;
+}
+
+.work__title {
+    margin: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1.2rem;
+    order: 2;
+}
+
+.work__title:hover ~ img{
+    filter: grayscale(0);
+}
+
+.work__title p {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.work__title a {
+    text-decoration: none;
+    color: orange;
+    border: 1px solid orange;
+    padding: .75rem 1rem;
+    text-transform: uppercase;
+    font-size: .8rem;
+    letter-spacing: .15rem;
+    transition: ease-in .2s;
+}
+
+.work__title a:hover{
+    background-color: orange;
+    color: #fff;
+}
+
+
+/* ========== COMMENTS ========== */
+.comments{
+    background-color: #c5c5c5;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.6rem;
+    align-items: baseline;
+    gap: 3rem 6.7rem;
+}
+
+.comment {
+    flex: 41%;
+    width: 400px;
+    background: #fff;
+    padding: 3rem 2rem;
+    font-weight: 600;
+    box-shadow: 0 0 12px 0 hsl(0deg 0% 48.19% / 25%);
+    display: flex;
+    gap: .6rem .3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.comment i {
+    color: orange;
+    font-size: 1.5rem;
+    text-shadow: 0 0 8px #ffa50096;
+}
+
+/* ========== CONTACT ========== */
+.contact{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(18rem, 1fr));
+    background-color: #0e0e0e;
+}
+
+.contact img{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.contact__form {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    background-color: #fff;
+    padding: 3rem;
+    gap: .8rem;
+}
+
+.contact__form h1{
+    font-size: 2.4rem;
+}
+
+.contact__form p{
+    line-height: 1.6rem;
+}
+
+.contact__form input,
+.contact__form textarea{
+    width: 100%;
+    background-color: #e0e0e0;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    outline-color: orange;
+}
+
+.contact__form textarea{
+    resize: none;
+    overflow: overlay;
+    line-height: 1.2rem;
+}
+
+.contact__form button{
+    align-self: flex-end;
+    background-color: orange;
+    border: 1px solid orange;
+    padding: 1rem 1.5rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    transition: ease-in .2s;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+    background-color: #0e0e0e;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: space-around;
+}
+
+/* ========== FOOTER DESCRIPTION ========== */
+.footer__description {
+    line-height: 1.2rem;
+    width: 12rem;
+}
+
+.footer__description h2{
+    margin: 1rem 0;
+}
+
+/* ========== FOOTER LINKS ========== */
+.footer__links {
+    list-style: none;
+    line-height: 3rem;
+    width: 12rem;
+}
+
+.footer a{
+    color: #fff;
+    text-decoration: none;
+    transition: ease-in .2s;
+}
+
+.footer a:hover{
+    color: orange;
+    text-decoration: underline;
+}
+
+/* ========== FOOTER CONTACT ========== */
+.footer__contact{
+    width: 13rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer__contact .contact{
+    display: flex;
+    gap: 1rem;
+}
+
+.footer__contact .contact i{
+    font-size: 2rem;
+    line-height: 0;
+}
+
+.footer__contact .social-icon{
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-icon a{
+    font-size: 1.3rem;
+}
+
+.social-icon a:hover{
+    transform: scale(1.5);
+}
+
+.contact__email span{
+    text-transform: uppercase;
+    color: orange;
+    letter-spacing: .2rem;
+}
+
+.contact__email p{
+    margin: .5rem 0;
+}
+
+/* ========== FOOTER SUBSCRIBE ========== */
+.footer__buttons{
+    width: 12rem;
+}
+
+.footer__buttons form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer__buttons button,
+.footer__buttons input{
+    width: 100%;
+    height: 50px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.footer__buttons .email-input{
+    background-color: #252525;
+    color: orange;
+    border: 1px solid orange;
+    transition: ease-in .2s;
+    padding: 0 1.5rem;
+    outline: none;
+}
+
+.footer__buttons .email-input::placeholder{
+    color: orange;
+}
+
+.subscribe{
+    cursor: pointer;
+    background-color: orange;
+    border: 1px solid orange;
+    transition: ease-in .2s;
+}
+
+/* ========== FOOTER COPYRIGHT ========== */
+.footer__copyright{
+    width: 100%;
+    border-top: 1px solid orange;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem 8rem;
+}
+
+.terms-link{
+    display: inline-flex;
+    gap: .6rem;
+}
+
+/* ========== SCROLL ========== */
+body::-webkit-scrollbar{
+    width: 12px;
+    background-color: #242424;
+}
+
+body::-webkit-scrollbar-button{
+    width: 0;
+    height: 0;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: orange;
+    border-radius: 24px;
+}
+
+/* ========== MEDIAQUERYS ========== */
+@media screen and (max-width: 770px) {
+    .work{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 634px) {
+    .section{
+        padding: 3rem 8%;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .contact__form{
+        height: 700px;
+    }
+}
